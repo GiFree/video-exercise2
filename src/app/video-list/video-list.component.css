@@ -1,0 +1,8 @@
+.card {
+  height: 100%;
+}
+
+.card img.mat-card-image {
+  min-height: 200px;
+  max-height: 200px;
+}

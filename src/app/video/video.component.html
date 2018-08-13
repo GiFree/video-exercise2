@@ -1,0 +1,14 @@
+<mat-card class="card">
+  <img mat-card-image src="{{video.thumbnailUrl}}" alt="unavailable" (click)="watch()">
+  <mat-card-content>
+    <p>{{video.title}}</p>
+    <p>{{video.views}} views</p>
+    <p>{{video.likes}} likes</p>
+    <p>{{video.createdAt.toDateString()}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="watch()">WATCH</button>
+    <button *ngIf="loggedOn()" mat-button (click)="favorite()">FAVORITE</button>
+    <button *ngIf="loggedOn()" mat-button (click)="delete()">DELETE</button>
+  </mat-card-actions>
+</mat-card>
