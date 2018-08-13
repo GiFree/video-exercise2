@@ -1,0 +1,13 @@
+<mat-grid-list cols="4" rowHeight="50px">
+  <mat-grid-tile [colspan]="3"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <button mat-raised-button (click)="toggleView()">Toggle View</button>
+  </mat-grid-tile>
+  <div>
+    <mat-grid-tile *ngFor="let video of videos" [colspan]="currentRowspan" [rowspan]="9">
+      <app-video [video]="video"></app-video>
+    </mat-grid-tile>
+  </div>
+
+
+</mat-grid-list>

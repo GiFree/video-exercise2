@@ -1,0 +1,8 @@
+<button mat-raised-button (click)="loadDemo()">Load Demo</button>
+<button mat-raised-button (click)="removeAll()">Remove All</button>
+<button mat-raised-button (click)="toggleOrder()">Order: {{order}}</button>
+<mat-checkbox *ngIf="loggedOn()" (click)="toggleFavorites(fav)" #fav>Only favorites!</mat-checkbox>
+
+<mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="pageEvent.next($event)">
+</mat-paginator>
+<app-video-list [videos]="videos | async"></app-video-list>
